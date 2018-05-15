@@ -1,0 +1,359 @@
+/* Reset CSS
+ * --------------------------------------- */
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td {
+    padding: 0;
+    margin: 0;
+}
+a {
+    text-decoration: none;
+}
+table {
+    border-spacing: 0;
+}
+fieldset, img {
+    border: 0;
+}
+address, caption, cite, code, dfn, em, strong, th, var {
+    font-weight: normal;
+    font-style: normal;
+}
+strong {
+    font-weight: bold;
+}
+ol, ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+caption, th {
+    text-align: left;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    color: #444;
+}
+q:before, q:after {
+    content: '';
+}
+abbr, acronym {
+    border: 0;
+}
+
+/* Custom CSS
+ * --------------------------------------- */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    color: rgba(0, 0, 0, 0.5);
+}
+h1 {
+    font-size: 3em;
+	font-weight: bold;
+    color: #000;
+	text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+}
+#menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 40px;
+    z-index: 70;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+#page1 p {
+	color: #000;
+	font-size: 1.5em;
+}
+
+/* Centered texts in each section */
+
+.section {
+    text-align: center;
+    overflow: hidden;
+}
+
+#myVideo {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+    background-color: black;
+    background-position: center center;
+    background-size: contain;
+    object-fit: cover;
+    /*cover video background */
+    z-index: 3;
+}
+
+/* Layer with position absolute in order to have it over the video */
+
+#page1 .layer {
+    position: absolute;
+    z-index: 4;
+    width: 100%;
+    left: 0;
+    top: 38%;
+    /* Preventing flicker on some browsers */
+    -webkit-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+/*solves problem with overflowing video in Mac with Chrome */
+
+#page1 {
+    overflow: hidden;
+}
+
+/* Hiding video controls */
+
+video::-webkit-media-controls {
+    display: none !important;
+}
+
+#page2 {
+	/*background: url(../images/img-1920x1200.jpg)no-repeat 0% 30% #000;
+    object-fit: cover;*/
+    background-size: 90%;
+	background-position: 0% 25%;
+	background-repeat: no-repeat;
+	padding: 0;
+}
+#page1 .video-bg {
+	background: rgba(255,255,255,.3);
+    position: absolute;
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+/* slide indicator */
+#fp-nav ul li a span {
+	width: 25px;
+	height: 4px;
+	border-radius: 0;
+}
+#fp-nav ul li a.active span,#fp-nav ul li:hover a.active span,#fp-nav ul li a.active span,#fp-nav ul li:hover a span {
+	width: 50px;
+	height: 4px;
+	border-radius: 0;
+	background: royalblue;
+}
+#fp-nav ul li {
+	height: 20px;
+}
+#fp-nav ul li a,
+#fp-nav ul li a span,
+#fp-nav ul li:hover a span {
+	margin: -6px 0 0 3px;
+}
+.logo h1 {
+	border: 1px solid #555;
+	font-size: 1.5em;
+	background: transparent;
+	font-weight: normal;
+	padding: 5px 35px;
+	position: absolute;
+	z-index: 5;
+	top: 10px;
+	left: 2%;
+	color: #555;
+	-webkit-transition: color .3s ease-in-out;
+	transition: color .3s ease-in-out;
+}
+.logo:hover h1 {
+	color: #fff!important;
+	border: 1px solid #fff!important;
+}
+#page2 h1,#page2 p {
+	color: #ccc;
+}
+.text-wrapper {
+	width: calc(75% / 2);
+    float: right;
+	margin-right: 8%;
+	text-align: left;
+}
+.text-wrapper h1 {
+	-webkit-transition-delay: 1s;
+	transition-delay: 1s;
+	margin-bottom: 10px;
+}
+.text-wrapper p {
+	font-size: 1em;
+    line-height: 26px;
+	margin-bottom: 10px;
+	-webkit-transition-delay: 2s;
+	transition-delay: 2s;
+}
+.text-wrapper p + p {
+	transition-delay: 3s;
+}
+.more {
+	text-transform: uppercase;
+    position: absolute;
+    z-index: 1;
+    color: #ccc;
+    right: 2%;
+    top: 3%;
+    font-size: .8em;
+	-webkit-transition: color .5s ease-in-out;
+	transition: color .5s ease-in-out;
+	-webkit-transition-delay: .1s;
+	transition-delay: .1s;
+	display: none;
+}
+.more:hover {
+	color: royalblue;
+}
+.fa-chevron-down:before {
+    content: "\f078";
+}
+    
+.arrow {
+    position:fixed;
+    z-index:99;
+    cursor: pointer;
+    left: 50%;
+	bottom: 15px;
+	color: royalblue;
+	-webkit-transition: color .3s ease-in-out;
+	transition: color .3s ease-in-out;
+}
+.arrow:hover {
+	color: #000;
+}
+/* content animation */
+.section > .fp-tableCell h1,
+.section > .fp-tableCell p,
+.section > .fp-tableCell .more {
+	opacity: 0;
+	-webkit-transition: opacity .7s ease-in-out;
+	transition: opacity .7s ease-in-out;
+}
+.section.active > .fp-tableCell h1,
+.section.active > .fp-tableCell p,
+.section.active > .fp-tableCell .more {
+	opacity: 1;
+}
+.section.active > .fp-tableCell h1 {
+	-webkit-transition-delay: .33s;
+	transition-delay: .33s;
+}
+.section.active > .fp-tableCell p {
+	-webkit-transition-delay: .66s;
+	transition-delay: .66s;
+}
+.section.active > .fp-tableCell p + p {
+	-webkit-transition-delay: .99s;
+	transition-delay: .99s;
+}
+.title-line {
+	background: #000;
+	height: 5px;
+	width: 11%;
+	margin: 10px auto 20px auto;
+	-webkit-transition: opacity 1s ease-in-out;
+	transition: opacity 1s ease-in-out;
+}
+
+/* section animation */
+.fp-section {
+	width: 100%!important;
+	position: absolute;
+	left: 0;
+	top: 0;
+	visibility: hidden;
+	opacity: 0;
+	z-index: 0;
+	-webkit-transition: all .7s ease-in-out;
+	transition: all .7s ease-in-out;
+}
+.fp-section.active {
+	visibility: visible;
+	opacity: 1;
+	z-index: 1;
+}
+
+@media only screen and (max-width: 1024px) {
+#page2 {
+	background: url(../images/img-1280x800.jpg)no-repeat left center #000;
+	background-size: 100%;
+}
+.more {
+	top: 2%;
+}
+}
+@media only screen and (max-width: 991px) {
+#page2 {
+	background-size: 100%;
+}
+}
+@media only screen and (max-width: 768px) {
+.text-wrapper {
+    width: calc(80% / 2);
+    margin-right: 8%;
+}
+.title-line {
+    width: 20%;
+}
+#page1 .layer {
+	width: 88%;
+    padding: 0 6%;
+}
+}
+@media only screen and (max-width: 640px) {
+#page2 {
+	background: url(../images/img-800x368.jpg)no-repeat 50% 20% #000!important;
+    background-size: 100%;
+}
+.text-wrapper {
+    width: 86%;
+    margin: 0 auto;
+    float: none;
+    bottom: 1%;
+    position: absolute;
+    left: 7%;
+}
+.title-line {
+    width: 27%;
+}
+}
+@media only screen and (max-width: 480px) {
+.section h1 {
+	font-size: 200%;
+}
+.section p {
+	font-size: 100%;
+}
+#page2 {
+	background: url(../images/img-800x368.jpg)no-repeat 50% 10% #000!important;
+}
+}
+@media only screen and (max-width: 320px) {
+.section h1 {
+	font-size: 150%;
+}
+.section p {
+	font-size: 80%;
+}
+.logo h1 {
+	font-size: 120%;
+}
+#page2 {
+	background-size: 220%!important;
+}
+}

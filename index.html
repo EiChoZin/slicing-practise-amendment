@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width;initial-scale=0.5;maximum-scale=1.0;user-scalable=no;">
+    <title>Slicing Practise</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+    <link rel="stylesheet" type="text/css" href="css/animation.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
+</head>
+
+<body>
+	<header>
+		<a href="javascript:void(0);" class="logo"><h1>Logo</h1></a>
+		<a href="javascript:void(0);"><span class="more">Discover more</span></a>
+	</header>
+	<nav>
+		<!--<ul id="menu">
+			<li data-menuanchor="firstPage"><a href="#firstPage">First slide</a></li>
+			<li data-menuanchor="secondPage"><a href="#secondPage">Second slide</a></li>
+		</ul>-->
+	</nav>
+    <div id="fullpage">
+		<main>
+			<section class="section" id="page1">
+				<div class="video-bg"></div>
+				<video id="myVideo" loop muted data-autoplay>
+					<source src="video/mov_bbb.mp4" type="video/mp4">
+					<source src="video/mov_bbb.ogg" type="video/ogg">
+				</video>
+				<div class="layer">
+					<h1>Lorem ipsum dolor</h1>
+					<div class="title-line"></div>
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. </p>
+					<p>Quisque volutpat mattis eros.</p>
+				</div>
+				<div class="arrow"><i class="fa fa-chevron-down fa-2x"></i></div>
+			</section> <!-- end of section -->
+			<section class="section responsive" id="page2" data-src="images/img-1920x1200.jpg">
+				<div class="text-wrapper">
+					<h1>Donec nec justo</h1>
+					<p>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.</p>
+					<p>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor.</p>
+				</div>
+			</section> <!-- end of section -->
+		</main>
+    </div> <!-- end of #fullpage -->
+	
+	<script src="js/jquery.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/scrolloverflow.js"></script>
+    <script src="js/jquery.easings.min.js"></script>
+    <script src="js/jquery.fullPage.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
